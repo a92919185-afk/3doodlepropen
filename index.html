@@ -8,21 +8,22 @@
     <!-- Google Ads Script -->
     <script src="https://cdn.gateraads.com/code/8300-7ec317f4-14bf-4aa9-93e3-d633c653c6f3"></script>
 
-    <!-- Advanced SEO Optimized for US & Canada - 2026 Google Compliance -->
+    <!-- Advanced SEO Optimized for US & Canada -->
     <title>3Doodler® Store | The #1 Best-Selling 3D Pen for Kids & Creatives</title>
     <meta name="description"
-        content="Get the original 3Doodler® 3D Pen. Safe, eco-friendly, and perfect for STEM learning. Free 2-Day Shipping in USA & Canada. Shop the 2026 collection today.">
+        content="Buy the original 3Doodler® 3D Pen. Safe, eco-friendly, and perfect for STEM learning. Create 3D art instantly. Free 2-Day Shipping in USA & Canada. Authorized Distributor.">
     <meta name="keywords"
-        content="3Doodler, 3d pen for kids, 3doodler start, 3doodler create plus, stem toys, buy 3doodler usa, buy 3doodler canada">
+        content="3Doodler, 3d pen for kids, 3doodler start, 3doodler create plus, stem toys, 3d printing pen, art supplies, educational toys, buy 3doodler usa, buy 3doodler canada">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://3doodlepropen.vercel.app/" />
 
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="3Doodler® | The World's First 3D Printing Pen">
     <meta property="og:description"
-        content="Bring imagination to life with the award-winning 3Doodler. North American store with free shipping to US & CA.">
-    <meta property="og:image" content="https://3doodlepropen.vercel.app/images/hero-pen.webp">
-    <meta property="og:type" content="website">
+        content="Bring your imagination to life with the award-winning 3Doodler. Safe, fun, and educational. Free shipping to US & CA today!">
+    <meta property="og:image" content="images/hero-pen.webp">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="3Doodler Store">
 
     <!-- Schema.org Product Data -->
     <script type="application/ld+json">
@@ -31,12 +32,12 @@
       "@type": "Product",
       "name": "3Doodler Create+ 3D Printing Pen",
       "image": ["https://3doodlepropen.vercel.app/images/hero-pen.webp"],
-      "description": "The world's first and best-selling 3D printing pen.",
+      "description": "The world's first and best-selling 3D printing pen. Perfect for creators, artists, and STEM learning.",
       "brand": {
         "@type": "Brand",
         "name": "3Doodler"
       },
-      "sku": "3D-CREATE-PLUS-2026",
+      "sku": "3D-CREATE-PLUS",
       "offers": {
         "@type": "Offer",
         "url": "https://3doodlepropen.vercel.app/",
@@ -49,428 +50,166 @@
     </script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Montserrat:wght@400;600;800&display=swap"
+        rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
 
     <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
         :root {
             --primary: #00AEEF;
-            --primary-dark: #002B5C;
+            --primary-dark: #008AC6;
             --accent: #FFC000;
-            --text-dark: #1A202C;
+            --accent-hover: #FFA000;
+            --green: #7ED321;
+            --text-dark: #2C3E50;
             --text-body: #4A5568;
-            --bg-light: #F8FAFC;
-            --green: #48BB78;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --bg: #FFFFFF;
+            --bg-light: #F7FAFC;
+            --border: #E2E8F0;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
+            background: var(--bg);
             color: var(--text-dark);
-            line-height: 1.5;
-            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 4.5rem 0; }
+        .hl { color: var(--primary); }
+        .hl-accent { color: var(--accent); }
 
-        /* Header Navigation */
         header {
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 0.75rem 0;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: linear-gradient(90deg, #002B5C 0%, #004F8C 100%);
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-img {
-            height: 35px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-body);
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+        .header-inner { display: flex; justify-content: center; align-items: center; position: relative; height: 50px; }
+        .logo-img { height: 32px; width: auto; filter: brightness(0) invert(1); }
 
         .promo-banner {
-            background: var(--primary-dark);
-            color: white;
-            text-align: center;
-            padding: 8px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            background: #00AEEF; color: white; text-align: center;
+            font-size: 0.8rem; font-weight: 700; padding: 0.4rem;
+            text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 8px;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
-            padding: 5rem 0 4rem;
-            background: linear-gradient(180deg, #EBF8FF 0%, #FFFFFF 100%);
-            text-align: center;
-            position: relative;
+            padding: 8.5rem 0 4rem; text-align: center;
+            background: radial-gradient(circle at 50% 30%, #E0F7FF 0%, #FFFFFF 70%);
+            position: relative; overflow: hidden;
         }
 
         .hero::before {
-            content: 'cloud';
-            font-family: 'Material Icons Round';
-            position: absolute;
-            left: 5%;
-            top: 15%;
-            font-size: 4rem;
-            color: var(--primary);
-            opacity: 0.05;
+            content: 'edit'; font-family: 'Material Icons Round';
+            position: absolute; left: 10%; top: 20%; font-size: 3rem; opacity: 0.1; transform: rotate(-15deg); color: var(--primary);
         }
 
         .hero::after {
-            content: 'auto_awesome';
-            font-family: 'Material Icons Round';
-            position: absolute;
-            right: 5%;
-            top: 20%;
-            font-size: 3rem;
-            color: var(--accent);
-            opacity: 0.1;
+            content: 'auto_awesome'; font-family: 'Material Icons Round';
+            position: absolute; right: 10%; top: 25%; font-size: 3rem; opacity: 0.1; transform: rotate(15deg); color: var(--accent);
         }
 
-        .hero-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            justify-content: center;
-            margin-bottom: 2rem;
+        .hero-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 2.5rem; }
+        .pill {
+            background: white; border: 2px solid var(--primary); color: var(--primary);
+            padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;
+            text-transform: uppercase; display: flex; align-items: center; gap: 5px;
         }
 
-        .badge-pill {
-            background: #fff;
-            border: 1px solid #E2E8F0;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--primary-dark);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            text-transform: uppercase;
-        }
+        .hero-img-container { margin: 1.5rem auto; position: relative; max-width: 200px; }
+        .hero-img { width: 100%; height: auto; filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15)); }
 
         .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--primary-dark);
+            font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900; line-height: 1.1; margin-bottom: 1rem;
         }
 
-        .hero-img-container {
-            width: 100%;
-            max-width: 280px;
-            margin: 1.5rem auto;
-            position: relative;
-        }
+        .hero-sub { font-size: 1.15rem; color: var(--text-body); max-width: 600px; margin: 0 auto 2.5rem; font-weight: 500; }
 
-        .hero-img {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+        .btn-3d {
+            display: inline-flex; align-items: center; gap: 0.75rem;
+            background: var(--accent); color: #fff; padding: 1.1rem 2.8rem;
+            border-radius: 50px; font-size: 1.1rem; font-weight: 800;
+            text-decoration: none; text-transform: uppercase; position: relative; top: 0;
+            box-shadow: 0 6px 0 #D48806, 0 10px 20px rgba(0, 0, 0, 0.15); transition: transform 0.1s;
         }
+        .btn-3d:active { top: 6px; box-shadow: 0 0 0 #D48806; }
 
-        .hero-text {
-            max-width: 650px;
-            margin: 0 auto 2.5rem;
-            color: var(--text-body);
-            font-weight: 500;
-            font-size: 1.05rem;
-        }
-
-        .btn-main {
-            background: var(--accent);
-            color: var(--primary-dark);
-            padding: 1.25rem 3rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 0 #D48806;
-            transition: all 0.1s ease;
-        }
-
-        .btn-main:active {
-            transform: translateY(3px);
-            box-shadow: 0 1px 0 #D48806;
-        }
-
-        /* Features Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 24px;
-            border: 1px solid #EDF2F7;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: #EBF8FF;
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        /* Trust Bar */
+        /* Trust Bar Original Style */
         .trust-bar {
-            background: var(--bg-light);
-            padding: 1.5rem 0;
-            border-top: 1px solid #EDF2F7;
-            border-bottom: 1px solid #EDF2F7;
+            background: var(--text-dark); padding: 1rem 0; color: white; margin-top: -2rem;
+            position: relative; z-index: 10; transform: rotate(-1deg) scale(1.02);
+        }
+        .trust-inner {
+            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem;
+            max-width: 1000px; margin: 0 auto; transform: rotate(1deg);
+        }
+        .trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; }
+
+        /* Flags */
+        .flag-section { background: var(--bg-light); text-align: center; }
+        .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; }
+        .section-sub { color: var(--text-body); margin-bottom: 3rem; font-weight: 500; }
+
+        .flag-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+        .flag-card {
+            background: white; border-radius: 20px; padding: 2rem; text-decoration: none; color: var(--text-dark);
+            border: 3px solid transparent; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;
+        }
+        .flag-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 174, 239, 0.15); }
+        .flag-img { width: 80px; border-radius: 8px; margin-bottom: 1.5rem; }
+        .country-name { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .ship-info { font-size: 0.9rem; color: var(--green); font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 0.4rem; }
+
+        /* Features */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .feature-card { background: white; padding: 2rem; border-radius: 20px; border: 2px solid var(--border); text-align: left; }
+        .f-icon {
+            width: 60px; height: 60px; background: #E0F7FF; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;
+            color: var(--primary); font-size: 1.8rem;
         }
 
-        .trust-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-body);
-        }
-
-        /* Selection Section */
-        .selection {
-            padding: 6rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.25rem;
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-dark);
-        }
-
-        .flag-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .region-card {
-            border: 2px solid #F1F5F9;
-            border-radius: 24px;
-            padding: 2.5rem;
-            text-align: center;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: #fff;
-        }
-
-        .region-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 174, 239, 0.1);
-        }
-
-        .flag-img {
-            width: 70px;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .region-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .ship-tag {
-            background: #F0FFF4;
-            color: var(--green);
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
+        /* Reviews */
+        .review-card { background: var(--bg-light); border-radius: 20px; padding: 2rem; border-bottom: 4px solid var(--primary); }
+        .stars { color: #FFC107; margin-bottom: 1rem; }
+        .r-text { font-style: italic; margin-bottom: 1.5rem; }
+        .r-author { font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+        .verified { background: var(--green); color: white; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.6rem; text-transform: uppercase; }
 
         /* FAQ */
-        .faq-container {
-            max-width: 800px;
-            margin: 4rem auto;
-        }
+        .faq-item { background: white; border: 2px solid var(--border); border-radius: 12px; margin-bottom: 1rem; overflow: hidden; }
+        .faq-q { padding: 1.25rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-a { padding: 0 1.25rem; max-height: 0; overflow: hidden; transition: all 0.3s; color: var(--text-body); }
+        .faq-item.active .faq-a { padding-bottom: 1.25rem; max-height: 500px; }
+        .faq-item.active { border-color: var(--primary); }
 
-        .faq-item {
-            border-bottom: 1px solid #E2E8F0;
-            padding: 1.5rem 0;
-        }
-
-        .faq-q {
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-a {
-            padding-top: 1rem;
-            display: none;
-            color: var(--text-body);
-            font-size: 0.95rem;
-        }
-
-        .faq-item.active .faq-a {
-            display: block;
-        }
-
-        /* Footer */
-        footer {
-            background: #1A202C;
-            color: #A0AEC0;
-            padding: 5rem 0 3rem;
-            font-size: 0.85rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .footer-col h4 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col li {
-            margin-bottom: 0.75rem;
-            cursor: pointer;
-        }
-
-        .footer-col li:hover {
-            color: white;
-        }
-
-        .disclaimer-box {
-            border-top: 1px solid #2D3748;
-            padding-top: 2rem;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .disclaimer-text {
-            font-size: 0.75rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
+        footer { background: var(--text-dark); color: white; padding: 4rem 0 3rem; text-align: center; }
+        .footer-links { margin-bottom: 2rem; }
+        .footer-links span { margin: 0 15px; cursor: pointer; font-weight: 600; font-size: 0.9rem; opacity: 0.8; }
+        .disclaimer { font-size: 0.7rem; color: #8898AA; max-width: 900px; margin: 0 auto 1.5rem; text-align: justify; text-align-last: center; }
 
         /* Modal */
         .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
+            display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.7); z-index: 2000;
+            justify-content: center; align-items: center; padding: 1.5rem; backdrop-filter: blur(5px);
         }
-
-        .modal-content {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            max-width: 700px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
+        .modal-content { background: white; padding: 2.5rem; border-radius: 16px; max-width: 700px; width: 100%; max-height: 85vh; overflow-y: auto; color: var(--text-dark); position: relative; }
+        .modal-close { position: absolute; top: 1rem; right: 1rem; cursor: pointer; width: 32px; height: 32px; background: #f3f4f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2.25rem; }
-            .hero-img-container { max-width: 220px; }
+            .hero h1 { font-size: 2.2rem; }
+            .trust-inner { flex-direction: column; gap: 0.5rem; }
+            .btn-3d { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -478,236 +217,209 @@
 <body>
 
     <div class="promo-banner">
-        <span class="material-icons-round" style="font-size: 1.1rem">redeem</span>
-        Flash Sale: Free Shipping + Bonus Plastics Today!
+        <span class="material-icons-round">redeem</span>
+        Free Box of Plastics with Every Order Today!
     </div>
 
     <header>
         <div class="container header-inner">
-            <img src="images/logo.webp" alt="3Doodler Store" class="logo-img" onerror="this.src='https://placehold.co/150x40?text=3Doodler+Store'">
-            <nav class="nav-links">
-                <a href="#choose">Regions</a>
-                <a href="#faq">FAQ</a>
-                <span onclick="openModal('contact')" style="cursor:pointer">Support</span>
-            </nav>
+            <img src="images/logo.webp" alt="3Doodler Logo" class="logo-img" onerror="this.src='https://placehold.co/150x40?text=3Doodler+Store'">
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-pills">
-                    <div class="badge-pill">
-                        <span class="material-icons-round" style="font-size: 1.1rem; color: var(--primary)">public</span>
-                        US & Canada
+    <section class="hero">
+        <div class="container">
+            <div class="hero-pills">
+                <div class="pill"><span class="material-icons-round" style="font-size: 1rem">public</span> US & CA Exclusive</div>
+                <div class="pill"><span class="material-icons-round" style="font-size: 1rem">emoji_events</span> #1 STEM Toy</div>
+                <div class="pill"><span class="material-icons-round" style="font-size: 1rem">eco</span> Non-Toxic</div>
+            </div>
+
+            <!-- Ordem solicitada: Título -> Foto -> Texto -> Botão -->
+            <h1>Bring Your Imagination<br>to <span class="hl">Life in 3D!</span></h1>
+
+            <div class="hero-img-container">
+                <img src="images/hero-pen.webp" alt="3Doodler" class="hero-img" onerror="this.src='https://placehold.co/300x300?text=3Doodler+Pen'">
+            </div>
+
+            <p class="hero-sub">The world's first and best-selling 3D printing pen. Lift your pen off the paper and draw
+                in the air. <strong>No apps, no screens, just pure creativity.</strong></p>
+
+            <a href="#choose-location" class="btn-3d">
+                Start Creating Now
+                <span class="material-icons-round">play_arrow</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Slanted Trust Bar Original -->
+    <div class="trust-bar">
+        <div class="trust-inner">
+            <div class="trust-item"><span class="material-icons-round">verified</span> 2.5 Million+ Creators</div>
+            <div class="trust-item"><span class="material-icons-round">school</span> Teacher Approved</div>
+            <div class="trust-item"><span class="material-icons-round">local_shipping</span> Fast Shipping (2-4 Days)</div>
+            <div class="trust-item"><span class="material-icons-round">stars</span> 30-Day Money Back</div>
+        </div>
+    </div>
+
+    <!-- Location Selection -->
+    <section id="choose-location" class="flag-section">
+        <div class="container">
+            <h2 class="section-title">Where are we shipping to?</h2>
+            <p class="section-sub">Select your location for local pricing and fastest delivery options.</p>
+
+            <div class="flag-grid">
+                <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51373" class="flag-card">
+                    <img src="https://flagcdn.com/w160/us.png" alt="USA Flag" class="flag-img">
+                    <h3 class="country-name">United States</h3>
+                    <div class="ship-info">
+                        <span class="material-icons-round">local_shipping</span>
+                        Free Shipping (2-4 Days)
                     </div>
-                    <div class="badge-pill">
-                        <span class="material-icons-round" style="font-size: 1.1rem; color: var(--accent)">emoji_events</span>
-                        #1 STEM Toy
+                    <p style="margin-top: 1rem; color: #777; font-size: 0.9rem;">Duty-Free. Ships from KY/NV.</p>
+                    <div style="margin-top: 1.5rem; font-weight: 700; color: var(--primary);">Shop Now &rarr;</div>
+                </a>
+
+                <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51373" class="flag-card">
+                    <img src="https://flagcdn.com/w160/ca.png" alt="Canada Flag" class="flag-img">
+                    <h3 class="country-name">Canada</h3>
+                    <div class="ship-info">
+                        <span class="material-icons-round">local_shipping</span>
+                        Fast Shipping (3-5 Days)
                     </div>
-                </div>
-
-                <h1>Create Anything in <br><span style="color: var(--primary)">Real 3D Instantly</span></h1>
-
-                <!-- Foto do produto posicionada logo após o título conforme solicitado -->
-                <div class="hero-img-container">
-                    <img src="images/hero-pen.webp" alt="3Doodler Pen" class="hero-img" onerror="this.src='https://placehold.co/300x300?text=3Doodler+Pen'">
-                </div>
-
-                <p class="hero-text">
-                    The original, award-winning 3D printing pen. No screens, no complex software—just pick it up and draw your ideas into reality.
-                </p>
-
-                <a href="#choose" class="btn-main">
-                    Get Started Now
-                    <span class="material-icons-round">arrow_forward</span>
+                    <p style="margin-top: 1rem; color: #777; font-size: 0.9rem;">No Customs Fees. Ships from Toronto.</p>
+                    <div style="margin-top: 1.5rem; font-weight: 700; color: var(--primary);">Shop Now &rarr;</div>
                 </a>
             </div>
-        </section>
-
-        <div class="trust-bar">
-            <div class="container trust-grid">
-                <div class="trust-item"><span class="material-icons-round">local_shipping</span> 2-4 Day Delivery</div>
-                <div class="trust-item"><span class="material-icons-round">verified_user</span> Official Warranty</div>
-                <div class="trust-item"><span class="material-icons-round">eco</span> Non-Toxic Materials</div>
-                <div class="trust-item"><span class="material-icons-round">sentiment_very_satisfied</span> 30-Day Returns</div>
-            </div>
         </div>
+    </section>
 
-        <section class="container" style="padding: 6rem 0">
-            <div class="section-title">
-                <h2>Why Everyone Loves It</h2>
-                <p style="color: var(--text-body)">More than just a toy. It's a tool for the mind.</p>
+    <!-- Features -->
+    <section>
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 class="section-title">Why <span class="hl">Everybody Loves</span> It</h2>
+                <p class="section-sub">More than just a toy. It's a tool for the mind.</p>
             </div>
+
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><span class="material-icons-round">lightbulb</span></div>
+                    <div class="f-icon"><span class="material-icons-round">lightbulb</span></div>
                     <h3>Limitless Creativity</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-body)">If you can draw it, you can make it. From jewelry to architecture, the only limit is your imagination.</p>
+                    <p>If you can draw it, you can make it. From glasses to buildings to jewelry, the only limit is your imagination. It helps children think in 3D.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><span class="material-icons-round">psychology</span></div>
-                    <h3>STEM Learning</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-body)">Build spatial understanding and design concepts. Hands-on engineering that feels like pure play.</p>
+                    <div class="f-icon"><span class="material-icons-round">psychology</span></div>
+                    <h3>STEM Engineering</h3>
+                    <p>Builds spatial understanding and design concepts. It’s hands-on learning that feels like play. Used in over 10,000 classrooms.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><span class="material-icons-round">security</span></div>
+                    <div class="f-icon"><span class="material-icons-round">security</span></div>
                     <h3>100% Kid Safe</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-body)">Non-toxic, BPA-free, and compostable. Our Start+ version has no hot parts, safe for ages 6+.</p>
+                    <p>Designed with safety in mind. Our specific plastics are non-toxic, BPA-free, and compostable. The 3Doodler Start+ has NO hot parts.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><span class="material-icons-round">phonelink_off</span></div>
+                    <div class="f-icon"><span class="material-icons-round">phonelink_off</span></div>
                     <h3>Screen-Free Fun</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-body)">Get off the tablet! Hours of tactile engagement without a screen. Perfect for rainy days.</p>
+                    <p>Get the kids off the iPad! Hours of focused, tactile engagement without staring at a screen. Perfect for rainy days.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="choose" class="selection" style="background: var(--bg-light)">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Select Your Shipping Region</h2>
-                    <p style="color: var(--text-body)">Enjoy localized support and duty-free shipping.</p>
+    <!-- Reviews -->
+    <section style="background: #FFFDF5;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">What <span class="hl-accent">Parents Say</span></h2>
+            <div class="flag-grid" style="max-width: 1000px;">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="r-text">"My 8-year-old hasn't touched his tablet in days. He's building an entire city on our kitchen table. Best gift ever!"</p>
+                    <div class="r-author">Sarah M. <span class="verified">Verified Buyer (USA)</span></div>
                 </div>
-
-                <div class="flag-grid">
-                    <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51373" class="region-card">
-                        <img src="https://flagcdn.com/w160/us.png" alt="USA" class="flag-img">
-                        <h3>United States</h3>
-                        <div class="ship-tag">
-                            <span class="material-icons-round" style="font-size: 1rem">bolt</span>
-                            Free 2-Day Shipping
-                        </div>
-                        <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-body)">Ships locally from KY/NV. No import duties.</p>
-                        <div style="margin-top: 2rem; font-weight: 800; color: var(--primary)">Shop US Store &rarr;</div>
-                    </a>
-
-                    <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51373" class="region-card">
-                        <img src="https://flagcdn.com/w160/ca.png" alt="Canada" class="flag-img">
-                        <h3>Canada</h3>
-                        <div class="ship-tag">
-                            <span class="material-icons-round" style="font-size: 1rem">local_shipping</span>
-                            Express 3-5 Day Shipping
-                        </div>
-                        <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-body)">Ships from Toronto. Prices in CAD available.</p>
-                        <div style="margin-top: 2rem; font-weight: 800; color: var(--primary)">Shop Canada Store &rarr;</div>
-                    </a>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="r-text">"I was worried about the burn risk, but it cools instantly. My daughter is making amazing jewelry. Highly recommend!"</p>
+                    <div class="r-author">David L. <span class="verified">Verified Buyer (Canada)</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="r-text">"Shipping to Vancouver was super fast. The pen is sturdy and the plastic lasts a long time. 10/10."</p>
+                    <div class="r-author">Emily R. <span class="verified">Verified Buyer (Canada)</span></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="faq" class="container" style="padding: 6rem 0;">
-            <div class="section-title">
-                <h2>Common Questions</h2>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">Is it safe for young children? <span class="material-icons-round">add</span></div>
-                    <div class="faq-a">Yes. The 3Doodler Start+ (6+) has no hot parts and uses BPA-free, compostable plastic. The Create+ (14+) has a metal tip that gets hot but is designed with safety guards.</div>
+    <!-- FAQ -->
+    <section>
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Frequently Asked <span class="hl">Questions</span></h2>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                    Is 3Doodler safe for children?
+                    <span class="material-icons-round">expand_more</span>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">Do I need a computer or software? <span class="material-icons-round">add</span></div>
-                    <div class="faq-a">No. It is a 100% standalone device. Just plug it in, wait for the light to turn green, and start drawing.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-q" onclick="toggleFaq(this)">What is your return policy? <span class="material-icons-round">add</span></div>
-                    <div class="faq-a">We offer a 30-day satisfaction guarantee and a 1-year limited warranty on all pens purchased through our store.</div>
+                <div class="faq-a">
+                    <p>Absolutely. Safety is our top priority. The Start+ has no hot parts. For older creators, the Create+ cools plastic almost instantly.</p>
                 </div>
             </div>
-        </section>
-    </main>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                    Do I need a computer or app to use it?
+                    <span class="material-icons-round">expand_more</span>
+                </div>
+                <div class="faq-a">
+                    <p>No! 3Doodler is a completely standalone creative tool. No apps, no wifi, and no computers required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Customer Support</h4>
-                    <ul>
-                        <li onclick="openModal('contact')">Contact Us</li>
-                        <li onclick="openModal('shipping')">Track Order</li>
-                        <li>Phone: +1 (888) 315-0955</li>
-                        <li>Email: support@3doodle-retail.com</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li onclick="openModal('privacy')">Privacy Policy</li>
-                        <li onclick="openModal('terms')">Terms of Service</li>
-                        <li onclick="openModal('shipping')">Refund Policy</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Business Info</h4>
-                    <p style="line-height: 1.6">NA Retail Partner Group<br>123 Commerce Way, Suite 400<br>Dover, DE 19901<br>United States</p>
-                </div>
+            <div class="footer-links">
+                <span onclick="openModal('terms')">Terms of Service</span>
+                <span onclick="openModal('privacy')">Privacy Policy</span>
+                <span onclick="openModal('shipping')">Shipping Policy</span>
+                <span onclick="openModal('contact')">Contact Us</span>
             </div>
 
-            <div class="disclaimer-box">
-                <p class="disclaimer-text">
-                    <strong>AUTHORIZED DISTRIBUTOR NOTICE:</strong> This website is operated by an authorized independent retail partner of 3Doodler (WobbleWorks, Inc.). 3Doodler®, 3Doodler Start™, and 3Doodler Create+™ are trademarks of WobbleWorks, Inc., used here for authorized retail sales. We fulfill all orders through official logistics centers in Kentucky (USA) and Ontario (Canada).
-                </p>
-                <p class="disclaimer-text">
-                    <strong>ADVERTISING DISCLOSURE:</strong> This site is not part of the Google, Facebook, or TikTok website. Additionally, this site is NOT endorsed by Google, Facebook, or TikTok in any way.
-                </p>
-                <p style="margin-top: 2rem; opacity: 0.5;">© 2026 Authorized North America 3Doodler Partner. All Rights Reserved.</p>
-            </div>
+            <!-- Disclaimer apenas no rodapé -->
+            <p class="disclaimer">
+                <strong>AUTHORIZED DISTRIBUTOR NOTICE:</strong> This website is operated by an authorized independent
+                retail partner of 3Doodler (WobbleWorks, Inc.). We fulfill
+                through authorized centers in Kentucky (USA) and Ontario (Canada).
+            </p>
+            <p class="disclaimer">
+                <strong>TRADEMARK DISCLAIMER:</strong> 3Doodler® is a trademark of WobbleWorks, Inc. Used here for retail purposes.
+            </p>
+
+            <p style="margin-top: 2rem; opacity: 0.6; font-size: 0.8rem;">© 2026 North America Retail Partner. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Modals Section -->
-    <div id="legal-modal" class="modal" onclick="if(event.target === this) closeModal()">
+    <div id="generic-modal" class="modal" onclick="if(event.target === this) this.style.display='none'">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-close" onclick="document.getElementById('generic-modal').style.display='none'">
+                <span class="material-icons-round">close</span>
+            </div>
             <div id="modal-body"></div>
         </div>
     </div>
 
-    <!-- Legal Content Templates -->
-    <div id="content-contact" style="display:none">
-        <h2>Contact Support</h2>
-        <p>Our dedicated team is here to help you with orders and technical questions.</p>
-        <p><strong>Email:</strong> support@3doodle-retail.com</p>
-        <p><strong>Support Hours:</strong> Mon-Fri, 9am - 6pm EST</p>
-        <p><strong>Address:</strong> 123 Commerce Way, Suite 400, Dover, DE 19901</p>
-    </div>
-
-    <div id="content-terms" style="display:none">
-        <h2>Terms of Service</h2>
-        <p>By using this site, you agree to our terms of service. We are an authorized retailer and fulfill all orders through official logistics partners to ensure product authenticity and warranty protection.</p>
-    </div>
-
-    <div id="content-privacy" style="display:none">
-        <h2>Privacy Policy</h2>
-        <p>We respect your privacy. Your data is encrypted via SSL and used only for order processing and shipping notifications. We do not sell user data to third parties.</p>
-    </div>
-
-    <div id="content-shipping" style="display:none">
-        <h2>Shipping & Returns</h2>
-        <p><strong>US Shipping:</strong> 2-4 business days via FedEx/USPS.</p>
-        <p><strong>CA Shipping:</strong> 3-5 business days from Toronto warehouse.</p>
-        <p><strong>Returns:</strong> 30-day window for unopened or defective items. Contact support to start a return.</p>
-    </div>
-
     <script>
-        function toggleFaq(el) {
-            const item = el.parentElement;
-            item.classList.toggle('active');
-            const icon = el.querySelector('.material-icons-round');
-            icon.innerText = item.classList.contains('active') ? 'remove' : 'add';
-        }
-
         function openModal(type) {
-            const body = document.getElementById('modal-body');
-            const content = document.getElementById('content-' + type).innerHTML;
-            body.innerHTML = content;
-            document.getElementById('legal-modal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('legal-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
+            const contents = {
+                contact: "<h2>Contact Us</h2><p>Email: support@na-3doodler-partner.com</p>",
+                terms: "<h2>Terms of Service</h2><p>Agreement between user and authorized reseller.</p>",
+                privacy: "<h2>Privacy</h2><p>We respect your data.</p>",
+                shipping: "<h2>Shipping</h2><p>Fast delivery in USA and Canada.</p>"
+            };
+            document.getElementById('modal-body').innerHTML = contents[type];
+            document.getElementById('generic-modal').style.display = 'flex';
         }
     </script>
 
