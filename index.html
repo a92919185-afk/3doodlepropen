@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
+    <!-- Google Ads Script -->
+    <script src="https://cdn.gateraads.com/code/8300-7ec317f4-14bf-4aa9-93e3-d633c653c6f3"></script>
+
     <!-- Advanced SEO Optimized for US & Canada - 2026 Google Compliance -->
     <title>3Doodler® Store | The #1 Best-Selling 3D Pen for Kids & Creatives</title>
     <meta name="description"
@@ -127,6 +130,10 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
         /* Hero Section */
@@ -134,21 +141,52 @@
             padding: 5rem 0 4rem;
             background: linear-gradient(180deg, #EBF8FF 0%, #FFFFFF 100%);
             text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: 'cloud';
+            font-family: 'Material Icons Round';
+            position: absolute;
+            left: 5%;
+            top: 15%;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.05;
+        }
+
+        .hero::after {
+            content: 'auto_awesome';
+            font-family: 'Material Icons Round';
+            position: absolute;
+            right: 5%;
+            top: 20%;
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.1;
+        }
+
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+            margin-bottom: 2rem;
         }
 
         .badge-pill {
             background: #fff;
             border: 1px solid #E2E8F0;
-            padding: 6px 16px;
+            padding: 8px 16px;
             border-radius: 50px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 800;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            margin-bottom: 2rem;
+            gap: 6px;
             color: var(--primary-dark);
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-transform: uppercase;
         }
 
         .hero h1 {
@@ -159,10 +197,25 @@
             color: var(--primary-dark);
         }
 
+        .hero-img-container {
+            width: 100%;
+            max-width: 280px;
+            margin: 1.5rem auto;
+            position: relative;
+        }
+
         .hero-img {
-            max-width: 250px;
-            margin: 2rem auto;
+            width: 100%;
+            height: auto;
             filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+        }
+
+        .hero-text {
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            color: var(--text-body);
+            font-weight: 500;
+            font-size: 1.05rem;
         }
 
         .btn-main {
@@ -173,7 +226,9 @@
             text-decoration: none;
             font-weight: 800;
             font-size: 1.1rem;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             box-shadow: 0 4px 0 #D48806;
             transition: all 0.1s ease;
         }
@@ -181,6 +236,39 @@
         .btn-main:active {
             transform: translateY(3px);
             box-shadow: 0 1px 0 #D48806;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 24px;
+            border: 1px solid #EDF2F7;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #EBF8FF;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
         }
 
         /* Trust Bar */
@@ -382,13 +470,17 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.25rem; }
+            .hero-img-container { max-width: 220px; }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="promo-banner">Flash Sale: Free Shipping + Bonus Plastics Today!</div>
+    <div class="promo-banner">
+        <span class="material-icons-round" style="font-size: 1.1rem">redeem</span>
+        Flash Sale: Free Shipping + Bonus Plastics Today!
+    </div>
 
     <header>
         <div class="container header-inner">
@@ -404,18 +496,32 @@
     <main>
         <section class="hero">
             <div class="container">
-                <div class="badge-pill">
-                    <span class="material-icons-round" style="font-size: 1rem; color: var(--green)">local_shipping</span>
-                    Fast Shipping: USA & Canada
+                <div class="hero-pills">
+                    <div class="badge-pill">
+                        <span class="material-icons-round" style="font-size: 1.1rem; color: var(--primary)">public</span>
+                        US & Canada
+                    </div>
+                    <div class="badge-pill">
+                        <span class="material-icons-round" style="font-size: 1.1rem; color: var(--accent)">emoji_events</span>
+                        #1 STEM Toy
+                    </div>
                 </div>
+
                 <h1>Create Anything in <br><span style="color: var(--primary)">Real 3D Instantly</span></h1>
-                <p style="max-width: 650px; margin: 0 auto 2rem; color: var(--text-body); font-weight: 500;">
+
+                <!-- Foto do produto posicionada logo após o título conforme solicitado -->
+                <div class="hero-img-container">
+                    <img src="images/hero-pen.webp" alt="3Doodler Pen" class="hero-img" onerror="this.src='https://placehold.co/300x300?text=3Doodler+Pen'">
+                </div>
+
+                <p class="hero-text">
                     The original, award-winning 3D printing pen. No screens, no complex software—just pick it up and draw your ideas into reality.
                 </p>
-                <a href="#choose" class="btn-main">Get Started Now</a>
-                <div class="hero-img-container">
-                    <img src="images/hero-pen.webp" alt="3Doodler Pen in action" class="hero-img" onerror="this.src='https://placehold.co/300x300?text=3Doodler+Pen'">
-                </div>
+
+                <a href="#choose" class="btn-main">
+                    Get Started Now
+                    <span class="material-icons-round">arrow_forward</span>
+                </a>
             </div>
         </section>
 
@@ -428,7 +534,36 @@
             </div>
         </div>
 
-        <section id="choose" class="selection">
+        <section class="container" style="padding: 6rem 0">
+            <div class="section-title">
+                <h2>Why Everyone Loves It</h2>
+                <p style="color: var(--text-body)">More than just a toy. It's a tool for the mind.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="material-icons-round">lightbulb</span></div>
+                    <h3>Limitless Creativity</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-body)">If you can draw it, you can make it. From jewelry to architecture, the only limit is your imagination.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="material-icons-round">psychology</span></div>
+                    <h3>STEM Learning</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-body)">Build spatial understanding and design concepts. Hands-on engineering that feels like pure play.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="material-icons-round">security</span></div>
+                    <h3>100% Kid Safe</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-body)">Non-toxic, BPA-free, and compostable. Our Start+ version has no hot parts, safe for ages 6+.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><span class="material-icons-round">phonelink_off</span></div>
+                    <h3>Screen-Free Fun</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-body)">Get off the tablet! Hours of tactile engagement without a screen. Perfect for rainy days.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="choose" class="selection" style="background: var(--bg-light)">
             <div class="container">
                 <div class="section-title">
                     <h2>Select Your Shipping Region</h2>
@@ -436,7 +571,7 @@
                 </div>
 
                 <div class="flag-grid">
-                    <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51376" class="region-card">
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51373" class="region-card">
                         <img src="https://flagcdn.com/w160/us.png" alt="USA" class="flag-img">
                         <h3>United States</h3>
                         <div class="ship-tag">
@@ -447,7 +582,7 @@
                         <div style="margin-top: 2rem; font-weight: 800; color: var(--primary)">Shop US Store &rarr;</div>
                     </a>
 
-                    <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51376" class="region-card">
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2T8KBXFR/?uid=51373" class="region-card">
                         <img src="https://flagcdn.com/w160/ca.png" alt="Canada" class="flag-img">
                         <h3>Canada</h3>
                         <div class="ship-tag">
@@ -461,7 +596,7 @@
             </div>
         </section>
 
-        <section id="faq" class="container" style="padding-bottom: 6rem;">
+        <section id="faq" class="container" style="padding: 6rem 0;">
             <div class="section-title">
                 <h2>Common Questions</h2>
             </div>
